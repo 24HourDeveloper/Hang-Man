@@ -13,17 +13,36 @@ public class MainHang {
 		Scanner input = new Scanner(System.in);
 		
 		// object that holds the hang man word
-		SecretWord sw = new SecretWord("Hangman");
-		String word = sw.getHangWord();
+		SecretWord secretWord = new SecretWord("Hangman");
+		String word = secretWord.getHangWord();
+		String emptyString = "";
 		
-		System.out.println("Enter first guess: ");
+		int i = 0;
+		while(i < word.length()){
+		System.out.println("Enter A Letter: ");
 		String guess = input.nextLine();
 		
-		if(guess.equals(word)){
+		for(int x= 0; x < word.length(); x++){
+			if(Character.toString(word.charAt(x)).equals(guess)){
+				System.out.println(guess);
+				emptyString += guess;
+				System.out.println("Empty String "+emptyString);
+				break;
+			}else{
+				System.out.println("Letter not found. Try again!");
+				continue;
+			}
+			
+		}
+		}
+		
+		//System.out.println(word.charAt(0));
+		
+		/*if(guess.equals(word)){
 			System.out.println("Correct!!!");
 		}else{
 			System.out.println("Incorrect!!");
-		}
+		}*/
 		
 		//System.out.println(sw.getHangWord());
 	}
