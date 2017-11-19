@@ -1,3 +1,9 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 public class MainHang {
 
@@ -11,6 +17,7 @@ public class MainHang {
 	public static void main(String[] args) {
 		//scanner so user can enter guess
 		Scanner input = new Scanner(System.in);
+
 
 		// object that holds the hang man word
 		SecretWord secretWord = new SecretWord("Hangman");
@@ -39,7 +46,7 @@ public class MainHang {
 			System.out.println(emptyString);
 
 			if (word.equalsIgnoreCase(emptyString.toString())){
-				System.out.println("Congrats you one the game!!!!");
+				System.out.println("Congrats you won the game!!!!");
 				return;
 			}
 			i++;
