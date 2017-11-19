@@ -11,6 +11,8 @@ public class Words {
 
     private List<String> list;
     private String word;
+    private List<String> description;
+    private String hint;
 
     public List<String> getList() {
         return list;
@@ -20,18 +22,31 @@ public class Words {
         return word;
     }
 
+    public List<String> getDescription() {
+        return description;
+    }
+
+    public String getHint() {
+        return hint;
+    }
+
     public void pullWordsFromFile() {
 
         list = new ArrayList<>();
+        description = new ArrayList<>();
         try {
 
             BufferedReader br = new BufferedReader(new FileReader("HangmanWords.txt"));
+            BufferedReader br2 = new BufferedReader(new FileReader("Description.txt"));
 
             while ((word = br.readLine()) != null) {
-                System.out.println(word);
                 list.add(word);
             }
+            while ((hint = br2.readLine()) != null){
+                description.add(hint);
+            }
             br.close();
+            br2.close();
 
         } catch (IOException e) {
             e.printStackTrace();

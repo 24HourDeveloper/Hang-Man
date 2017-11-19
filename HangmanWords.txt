@@ -1,4 +1,4 @@
 hello
 apple
-animal
-person
+dog
+halo

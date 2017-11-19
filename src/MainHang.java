@@ -17,6 +17,9 @@ public class MainHang {
 		int random = (int) Math.round(Math.random() * words.getList().size()) ;
 		String secretWord = words.getList().get(random);
 
+		//provide the hint
+		System.out.println("Hint: " + words.getDescription().get(random));
+
 		StringBuilder emptyString = new StringBuilder("");
 		for (int c = 0; c < secretWord.length(); c++){
 			emptyString = emptyString.append("_");
