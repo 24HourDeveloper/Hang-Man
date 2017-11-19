@@ -1,9 +1,3 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 public class MainHang {
 
@@ -13,16 +7,20 @@ public class MainHang {
 	 * game logic checks to see if the letter selected was correct
 	 */
 
-
 	public static void main(String[] args) {
 		//scanner so user can enter guess
 		Scanner input = new Scanner(System.in);
 
+		Words words = new Words();
+		words.pullWordsFromFile();
 
-		// object that holds the hang man word
-		SecretWord secretWord = new SecretWord("Hangman");
-		String word = secretWord.getHangWord();
-		StringBuilder emptyString = new StringBuilder("_______");
+		int random = (int) Math.round(Math.random() * words.getList().size()) ;
+		String secretWord = words.getList().get(random);
+
+		StringBuilder emptyString = new StringBuilder("");
+		for (int c = 0; c < secretWord.length(); c++){
+			emptyString = emptyString.append("_");
+		}
 
 		int i = 0;
 		while (i < 6) {
@@ -30,9 +28,9 @@ public class MainHang {
 			String guess = input.nextLine();
 
 			int z = 0;
-			for (int a = 0; a < word.length(); a++){
+			for (int a = 0; a < secretWord.length(); a++){
 				//placing the characters in the right spot
-				if (word.toLowerCase().charAt(a) == guess.charAt(0)){
+				if (secretWord.toLowerCase().charAt(a) == guess.charAt(0)){
 					emptyString.setCharAt(a, guess.charAt(0));
 					z++;
 				}
@@ -45,7 +43,7 @@ public class MainHang {
 
 			System.out.println(emptyString);
 
-			if (word.equalsIgnoreCase(emptyString.toString())){
+			if (secretWord.equalsIgnoreCase(emptyString.toString())){
 				System.out.println("Congrats you won the game!!!!");
 				return;
 			}

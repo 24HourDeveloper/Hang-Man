@@ -9,23 +9,32 @@ import java.util.List;
  */
 public class Words {
 
-    List<String> list = new ArrayList<>();
+    private List<String> list;
+    private String word;
 
+    public List<String> getList() {
+        return list;
+    }
+
+    public String getWord() {
+        return word;
+    }
 
     public void pullWordsFromFile() {
-        String str;
+
+        list = new ArrayList<>();
         try {
 
             BufferedReader br = new BufferedReader(new FileReader("HangmanWords.txt"));
 
-            while ((str = br.readLine()) != null) {
-                list.add(str);
+            while ((word = br.readLine()) != null) {
+                System.out.println(word);
+                list.add(word);
             }
             br.close();
 
-            System.out.println(list.get(2));
         } catch (IOException e) {
-            System.out.println("hi");
+            e.printStackTrace();
         }
     }
 
