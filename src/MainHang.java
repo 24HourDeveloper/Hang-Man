@@ -30,6 +30,11 @@ public class MainHang {
 			System.out.println("Enter A Letter: ");
 			String guess = input.nextLine();
 
+			if (guess.length() != 1){
+				System.out.println("invalid input");
+				return;
+			}
+
 			int z = 0;
 			for (int a = 0; a < secretWord.length(); a++){
 				//placing the characters in the right spot
