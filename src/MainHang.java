@@ -14,7 +14,8 @@ public class MainHang {
 		Words words = new Words();
 		words.pullWordsFromFile();
 
-		int random = (int) Math.round(Math.random() * words.getList().size()) ;
+		int random = (int) Math.round(Math.random() * (words.getList().size() - 1));
+
 		String secretWord = words.getList().get(random);
 
 		//provide the hint
@@ -28,7 +29,7 @@ public class MainHang {
 		int i = 0;
 		while (i < 6) {
 			System.out.println("Enter A Letter: ");
-			String guess = input.nextLine();
+			String guess = input.nextLine().toLowerCase();
 
 			if (guess.length() != 1){
 				System.out.println("invalid input");
