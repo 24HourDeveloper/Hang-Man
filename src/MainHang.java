@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class MainHang {
 
 	/*This is a Hang man game
-	 * You only get 6 trys
+	 * You only get 6 tries
 	 * You get one letter at a time
 	 * game logic checks to see if the letter selected was correct
 	 */
@@ -32,6 +32,11 @@ public class MainHang {
 			String guess = input.nextLine().toLowerCase();
 
 			if (guess.length() != 1){
+				System.out.println("invalid input");
+				return;
+			}
+
+			if (!Character.isLetter(guess.charAt(0))){
 				System.out.println("invalid input");
 				return;
 			}
