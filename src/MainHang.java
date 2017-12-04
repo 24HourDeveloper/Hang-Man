@@ -54,15 +54,107 @@ public class MainHang {
 				i--;
 			if (z > 1)
 				i--;
-
-			System.out.println(emptyString);
+			/*
+			System.out.println("   ____________");
+			System.out.println("   |           | ");
+			System.out.println("   |               ");
+			System.out.println("   |               ");
+			System.out.println("   |               ");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("___|___");
+			*/
 
 			if (secretWord.equalsIgnoreCase(emptyString.toString())){
 				System.out.println("Congrats you won the game!!!!");
 				return;
 			}
 			i++;
+
+			if (i == 0){
+				System.out.println("   ____________");
+				System.out.println("   |           | ");
+				System.out.println("   |               ");
+				System.out.println("   |               ");
+				System.out.println("   |               ");
+				System.out.println("   |");
+				System.out.println("   |");
+				System.out.println("   |");
+				System.out.println("___|___");
+			}
+			if (i == 1) {
+				System.out.println("   ____________");
+				System.out.println("   |          _|_");
+				System.out.println("   |         /   \\");
+				System.out.println("   |        |     |");
+				System.out.println("   |         \\_ _/");
+				System.out.println("   |");
+				System.out.println("   |");
+				System.out.println("   |");
+				System.out.println("___|___");
+			}
+			if (i == 2) {
+				System.out.println("Wrong guess, try again");
+				System.out.println("   ____________");
+				System.out.println("   |          _|_");
+				System.out.println("   |         /   \\");
+				System.out.println("   |        |     |");
+				System.out.println("   |         \\_ _/");
+				System.out.println("   |           |");
+				System.out.println("   |           |");
+				System.out.println("   |");
+				System.out.println("___|___");
+			}
+			if (i == 3) {
+				System.out.println("Wrong guess, try again");
+				System.out.println("   ____________");
+				System.out.println("   |          _|_");
+				System.out.println("   |         /   \\");
+				System.out.println("   |        |     |");
+				System.out.println("   |         \\_ _/");
+				System.out.println("   |           |");
+				System.out.println("   |           |");
+				System.out.println("   |            \\ ");
+				System.out.println("___|___          \\");
+			}
+			if (i == 4) {
+				System.out.println("Wrong guess, try again");
+				System.out.println("   ____________");
+				System.out.println("   |          _|_");
+				System.out.println("   |         /   \\");
+				System.out.println("   |        |     |");
+				System.out.println("   |         \\_ _/");
+				System.out.println("   |           |");
+				System.out.println("   |           |");
+				System.out.println("   |          / \\ ");
+				System.out.println("___|___      /   \\");
+			}
+			if (i == 5) {
+				System.out.println("GAME OVER!");
+				System.out.println("   ____________");
+				System.out.println("   |          _|_");
+				System.out.println("   |         /   \\");
+				System.out.println("   |        |     |");
+				System.out.println("   |         \\_ _/");
+				System.out.println("   |           |_");
+				System.out.println("   |           | \\");
+				System.out.println("   |          / \\ ");
+				System.out.println("___|___      /   \\");
+			}
+
+			System.out.println(emptyString);
+
 		}
+		System.out.println("   ____________");
+		System.out.println("   |          _|_");
+		System.out.println("   |         /   \\");
+		System.out.println("   |        |     |");
+		System.out.println("   |         \\_ _/");
+		System.out.println("   |          _|_");
+		System.out.println("   |         / | \\");
+		System.out.println("   |          / \\ ");
+		System.out.println("___|___      /   \\");
 		System.out.println("Sorry you lost the game. please try again!");
 	}
 
