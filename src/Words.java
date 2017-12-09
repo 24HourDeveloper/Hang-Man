@@ -39,6 +39,7 @@ public class Words {
             BufferedReader br = new BufferedReader(new FileReader("HangmanWords.txt"));
             BufferedReader br2 = new BufferedReader(new FileReader("Description.txt"));
 
+
             while ((word = br.readLine()) != null) {
                 list.add(word);
             }

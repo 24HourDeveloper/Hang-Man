@@ -36,6 +36,7 @@ public class MainHang {
 				return;
 			}
 
+
 			if (!Character.isLetter(guess.charAt(0))){
 				System.out.println("invalid input");
 				return;
@@ -54,6 +55,7 @@ public class MainHang {
 				i--;
 			if (z > 1)
 				i--;
+
 			/*
 			System.out.println("   ____________");
 			System.out.println("   |           | ");
@@ -66,11 +68,16 @@ public class MainHang {
 			System.out.println("___|___");
 			*/
 
+
+			System.out.println(emptyString);
+
+
 			if (secretWord.equalsIgnoreCase(emptyString.toString())){
 				System.out.println("Congrats you won the game!!!!");
 				return;
 			}
 			i++;
+
 
 			if (i == 0){
 				System.out.println("   ____________");
@@ -155,6 +162,9 @@ public class MainHang {
 		System.out.println("   |         / | \\");
 		System.out.println("   |          / \\ ");
 		System.out.println("___|___      /   \\");
+
+		}
+
 		System.out.println("Sorry you lost the game. please try again!");
 	}
 
