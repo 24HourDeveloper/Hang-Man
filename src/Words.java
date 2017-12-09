@@ -36,8 +36,9 @@ public class Words {
         description = new ArrayList<>();
         try {
 
-            BufferedReader br = new BufferedReader(new FileReader("HangmanWords"));
-            BufferedReader br2 = new BufferedReader(new FileReader("Description"));
+            BufferedReader br = new BufferedReader(new FileReader("HangmanWords.txt"));
+            BufferedReader br2 = new BufferedReader(new FileReader("Description.txt"));
+
 
             while ((word = br.readLine()) != null) {
                 list.add(word);
